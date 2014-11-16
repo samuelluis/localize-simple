@@ -1,0 +1,30 @@
+{
+  "name": "localize-simple",
+  "version": "0.0.1",
+  "description": "Simple library to localize your app",
+  "main": "index.js",
+  "author": "Samuel Luis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelluis/localize-simple.git"
+  },
+  "keywords": [
+    "Locale",
+    "Internationalization",
+    "i18n"
+  ],
+  "bugs": {
+    "url": "https://github.com/samuelluis/localize-simple/issues",
+    "email": "samuel@bontix.com"
+  },
+  "homepage": "https://github.com/samuelluis/localize-simple",
+  "devDependencies": {},
+  "peerDependencies": {
+    "express": "*",
+    "express-session": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
