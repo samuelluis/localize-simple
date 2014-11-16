@@ -3,14 +3,12 @@
 Simple library to localize your app
 
 ## It's simple
----
 
 ```html
 <%- t("menu.home") %>
 ```
 
 ## Installation
----
 
 Install node.js library:
 ```
@@ -18,7 +16,6 @@ npm install localize-simple
 ```
 
 ## How to use
----
 
 ```javascript
 var localize = require('localize-simple');
