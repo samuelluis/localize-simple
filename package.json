@@ -16,15 +16,17 @@
   ],
   "bugs": {
     "url": "https://github.com/samuelluis/localize-simple/issues",
-    "email": "samuel@bontix.com"
+    "email": "samuelluis@outlook.com"
   },
   "homepage": "https://github.com/samuelluis/localize-simple",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "*"
+  },
   "peerDependencies": {
     "express": "*",
     "express-session": "*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vows --spec"
   }
 }
