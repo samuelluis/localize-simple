@@ -1,5 +1,12 @@
 # Localize Simple
 
+[![npm version](https://badge.fury.io/js/localize-simple.svg)](http://badge.fury.io/js/localize-simple)
+[![Build Status](https://travis-ci.org/samuelluis/localize-simple.svg?branch=master)](https://travis-ci.org/samuelluis/localize-simple)
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Code Climate](https://codeclimate.com/github/samuelluis/localize-simple/badges/gpa.svg)](https://codeclimate.com/github/samuelluis/localize-simple)
+[![Coverage Status](https://img.shields.io/coveralls/samuelluis/localize-simple.svg)](https://coveralls.io/r/samuelluis/localize-simple)
+[![Gratipay][gratipay-image]][gratipay-url]
+
 Simple library to localize your app
 
 ## It's simple
@@ -23,16 +30,20 @@ var localize = require('localize-simple');
 
 ### Library initialization (express required):
 ```javascript
-app.use(localize(app, path_to_locales, default_locale));
+app.use(localize({ router: router, locales_path: locales_path, default_locale: default_locale }));
 //or exampled
-app.use(localize(app, path.join(__dirname, 'locales'), "es"));
+app.use(localize({
+	router: app,
+	locales_path: path.join(__dirname, 'locales'),
+	default_locale: "es"
+}));
 ```
 
-localize receive 3 params:
+#### Options
 
- - app: an express instance
- - path_to_locales: path to your locales folder which must to contains at least a **.js** file with name of default_locale, e.g.: *en.js*
- - default_locale: default value for locale that will be load if there isn't no locale set at session. If not passed ```"en"``` will be taken instead
+ - `router`: an express instance or another router like `router.get(url, callback)`.
+ - `locales_path`: path to your locales folder which must to contains at least a **.js** file with name of default_locale, e.g.: *en.js*
+ - `default_locale`: default value for locale that will be load if there isn't no locale set at session. If not passed ```"en"``` will be taken instead
 
 ### What else?
 
@@ -168,6 +179,6 @@ module.exports = {
 And now you'll get the right text you want.
 
 #### Contact
-For support or contact you can write to [samuel@bontix.com](mailto:samuel@bontix.com). If you found a bug or improve to do, post an [issue](https://github.com/samuelluis/localize-simple/issues).
+For support or contact you can write to [samuelluis@outlook.com](mailto:samuelluis@outlook.com). If you found a bug or improve to do, post an [issue](https://github.com/samuelluis/localize-simple/issues).
 
-Thanks for colaborate!
+Thanks for collaborate!
