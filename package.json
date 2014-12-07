@@ -20,13 +20,14 @@
   },
   "homepage": "https://github.com/samuelluis/localize-simple",
   "devDependencies": {
-    "chai": "*"
+    "chai": "*",
+    "mocha": "*"
   },
   "peerDependencies": {
     "express": "*",
     "express-session": "*"
   },
   "scripts": {
-    "test": "vows --spec"
+    "test": "./node_modules/mocha/bin/mocha"
   }
 }
