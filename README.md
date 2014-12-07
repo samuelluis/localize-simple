@@ -2,10 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/localize-simple.svg)](http://badge.fury.io/js/localize-simple)
 [![Build Status](https://travis-ci.org/samuelluis/localize-simple.svg?branch=master)](https://travis-ci.org/samuelluis/localize-simple)
-[![NPM Downloads][downloads-image]][downloads-url]
 [![Code Climate](https://codeclimate.com/github/samuelluis/localize-simple/badges/gpa.svg)](https://codeclimate.com/github/samuelluis/localize-simple)
 [![Coverage Status](https://img.shields.io/coveralls/samuelluis/localize-simple.svg)](https://coveralls.io/r/samuelluis/localize-simple)
-[![Gratipay][gratipay-image]][gratipay-url]
 
 Simple library to localize your app
 
