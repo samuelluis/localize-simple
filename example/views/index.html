@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Localize Simple Example App</title>
+    </head>
+    <body>
+        <span><%- t("menu") %></span> &gt;
+        <span><%- t("menu.home") %></span>
+        <br>
+        <a href="/locale/en/">EN</a> |
+        <a href="/locale/es/">ES</a>
+        <br><br>
+        <a href="https://www.npmjs.com/package/localize-simple"><%- t("menu.download", {version: version}) %></a>
+        <br><br>
+        <%- partial("text_"+lang) %>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "localize-simple-example",
+  "version": "0.0.0",
+  "description": "Example app using localize-simple.",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "connect-mongo": "*",
+    "express-session": "*",
+    "express-partials": "*",
+    "ejs": "*"
+  }
+}
