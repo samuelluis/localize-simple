@@ -11,5 +11,5 @@ module.exports = function(options) {
     res.redirect("/" + (req.params[0] || ""));
   });
 
-  return main.init(options.default, options.path, options.storage);
+  return main.init(options.default, options.path);
 };
