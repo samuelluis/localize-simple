@@ -67,7 +67,7 @@ describe("locale.translate", function(){
     describe("en", function() {
         var t;
         before(function(){
-            t = locales.call(this, "en", "../test/locales");
+            t = locales.call(this, "en", "../example/locales");
             expect(t).to.be.a("function");
         });
 
@@ -91,7 +91,7 @@ describe("locale.translate", function(){
     describe("es", function() {
         var t;
         before(function(){
-            t = locales.call(this, "es", "../test/locales");
+            t = locales.call(this, "es", "../example/locales");
             expect(t).to.be.a("function");
         });
 
