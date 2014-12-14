@@ -3,7 +3,6 @@
 [![npm version](https://badge.fury.io/js/localize-simple.svg)](http://badge.fury.io/js/localize-simple)
 [![Build Status](https://travis-ci.org/samuelluis/localize-simple.svg?branch=master)](https://travis-ci.org/samuelluis/localize-simple)
 [![Code Climate](https://codeclimate.com/github/samuelluis/localize-simple/badges/gpa.svg)](https://codeclimate.com/github/samuelluis/localize-simple)
-[![Coverage Status](https://img.shields.io/coveralls/samuelluis/localize-simple.svg)](https://coveralls.io/r/samuelluis/localize-simple)
 
 Simple library to localize your app
 
@@ -26,26 +25,27 @@ npm install localize-simple
 var localize = require('localize-simple');
 ```
 
-### Library initialization (express required):
+### Library initialization (express or another router required):
 ```javascript
-app.use(localize({ router: router, locales_path: locales_path, default_locale: default_locale }));
-//or exampled
+//syntax
+app.use(localize({ router: router, path: locales_path, default: default_locale }));
+//example
 app.use(localize({
 	router: app,
-	locales_path: path.join(__dirname, 'locales'),
-	default_locale: "es"
+	path: path.join(__dirname, 'locales'),
+	default: "es"
 }));
 ```
 
 #### Options
 
  - `router`: an express instance or another router like `router.get(url, callback)`.
- - `locales_path`: path to your locales folder which must to contains at least a **.js** file with name of default_locale, e.g.: *en.js*
- - `default_locale`: default value for locale that will be load if there isn't no locale set at session. If not passed ```"en"``` will be taken instead
+ - `path`: path to your locales folder which must to contains at least a **.js** file with name of default_locale, e.g.: *en.js*
+ - `default`: default value for locale that will be load if there isn't no locale set at session. If not passed ```"en"``` will be taken instead
 
 ### What else?
 
-In locale files we need to have the same structure like this:
+We need to have the same structure between locale files, like this:
 
 ```javascript
 //en.js
@@ -64,19 +64,19 @@ module.exports = {
 };
 ```
 
-Then at view you can do:
+So in views you can do:
 
 ```html
 <%- t("menu.home") %>
 ```
 
-And it's all!
+And that's it!
 
 ### Changing locale
 
-To change locale *localize-simple* declares the *GET* route ```'/locale/:lang/*'```, **:lang** is the locale to change, e.g.: *en*, *es* or any locale that you have declared. The wildcard ```*``` is the return_url to redirect to after changing the locale.
+To change locale *localize-simple* declares the *get* route ```'/locale/:lang/*'```, **:lang** is the locale to change, e.g.: *en*, *es* or any locale that you've declared. The wildcard ```*``` is the return_url to go after changing the locale.
 
-If we want to have a link to change locales you can put this:
+If we want to have a link to change locales you can have:
 
 ```html
 <a href="/locale/es/about">ES</a>
@@ -88,14 +88,14 @@ Clicking the one of the links above *localize-simple* will change the locale and
 
 ### Doing something more complex
 
-If you have a whole partial that have to change depends of the locale, you will be have access to variable called **lang** and it's value is the current local, e.g:
+If you have a whole partial whose content must change depending on the locale, you also have access to variable called **lang** whose value is the current locale, e.g:
 
 ```html
-<% if(lang=="en"){ %>
+<% if (lang === "en"){ %>
 	<%- partial("profile_en") %>
 <% } %>
 
-<% if(lang=="es"){ %>
+<% if (lang === "es"){ %>
 	<%- partial("profile_es") %>
 <% } %>
 
@@ -106,7 +106,7 @@ If you have a whole partial that have to change depends of the locale, you will 
 
 ### Passing params
 
-If you have to use some param for you translation you can do this:
+If you want to have some variable in your translation you can do this:
 
 ```javascript
 //en.js
@@ -141,7 +141,7 @@ for **es**:
 
 *Descarga nuestra versión 2.5*
 
-### Abount the structure
+### About the structure
 
 If you have a structure like this:
 
@@ -155,13 +155,13 @@ module.exports = {
 };
 ```
 
-But you want to get the locale for **menu**:
+But you want to get the locale text for **menu**:
 
 ```html
 <%- t("menu") %>
 ```
 
-Right now you'll get a whole content of **menu** key, and you can't define another **menu** key at the same path, you can do this:
+Right now you'll get the message: **translation missing for: [locale].menu**, but you can't define another **menu** key at the same path, you can do this:
 
 ```javascript
 //en.js
@@ -177,6 +177,6 @@ module.exports = {
 And now you'll get the right text you want.
 
 #### Contact
-For support or contact you can write to [samuelluis@outlook.com](mailto:samuelluis@outlook.com). If you found a bug or improve to do, post an [issue](https://github.com/samuelluis/localize-simple/issues).
+For support or contact you can write to [samuelluis@outlook.com](mailto:samuelluis@outlook.com). If you found a bug or have any suggestions, please post an [issue](https://github.com/samuelluis/localize-simple/issues).
 
-Thanks for collaborate!
+Thanks for collaborating!
