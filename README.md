@@ -1,11 +1,11 @@
 # Localize Simple
 
-[![NPM version](https://img.shields.io/npm/v/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
-[![License](https://img.shields.io/npm/l/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
-[![NPM downloads](https://img.shields.io/npm/dm/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
 [![Build Status](https://img.shields.io/travis/samuelluis/localize-simple.svg?style=flat)](https://travis-ci.org/samuelluis/localize-simple)
 [![Code Climate](https://img.shields.io/codeclimate/github/samuelluis/localize-simple.svg?style=flat)](https://codeclimate.com/github/samuelluis/localize-simple)
 [![Codacy Badge](https://img.shields.io/codacy/71f38b9f6d7543cca436eb76627b87d3.svg?style=flat)](https://www.codacy.com/public/samuelluis/localize-simple)
+[![NPM downloads](https://img.shields.io/npm/dm/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
+[![NPM version](https://img.shields.io/npm/v/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
+[![License](https://img.shields.io/npm/l/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
 
 Simple library to localize your app
 
