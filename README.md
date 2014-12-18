@@ -1,6 +1,6 @@
 # Localize Simple
 
-[![Build Status](https://magnum.travis-ci.com/lavaina/shopify-lavaina.svg?token=BauG5YDiPYVqHu1FSQGz&branch=devel)](https://magnum.travis-ci.com/lavaina/shopify-lavaina)
+[![Build Status](https://travis-ci.org/samuelluis/localize-simple.svg?branch=master)](https://travis-ci.org/samuelluis/localize-simple)
 [![Code Climate](https://img.shields.io/codeclimate/github/samuelluis/localize-simple.svg?style=flat)](https://codeclimate.com/github/samuelluis/localize-simple)
 [![Codacy Badge](https://img.shields.io/codacy/71f38b9f6d7543cca436eb76627b87d3.svg?style=flat)](https://www.codacy.com/public/samuelluis/localize-simple)
 [![NPM downloads](https://img.shields.io/npm/dm/localize-simple.svg?style=flat)](https://www.npmjs.com/package/localize-simple)
