@@ -1,6 +1,6 @@
 {
   "name": "localize-simple",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple library to localize your app",
   "main": "index.js",
   "author": "Samuel Luis",
@@ -19,7 +19,7 @@
     "email": "samuelluis@outlook.com"
   },
   "homepage": "https://github.com/samuelluis/localize-simple",
-  "devDependencies": {
+  "dependencies": {
     "chai": "*",
     "mocha": "*"
   },
