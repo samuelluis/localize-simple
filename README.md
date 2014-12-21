@@ -11,7 +11,7 @@ Simple library to localize your app
 
 ## It's simple
 
-```html
+```javascript
 <%- t("menu.home") %>
 ```
 
@@ -44,7 +44,7 @@ app.use(localize({
 
  - `router`: an express instance or another router like `router.get(url, callback)`.
  - `path`: path to your locales folder which must to contains at least a **.js** file with name of default_locale, e.g.: *en.js*
- - `default`: default value for locale that will be load if there isn't no locale set at session. If not passed ```"en"``` will be taken instead
+ - `default`: default value for locale that will be load if there isn't no locale set at session. If not passed `"en"` will be taken instead
 
 ### What else?
 
@@ -69,7 +69,7 @@ module.exports = {
 
 So in views you can do:
 
-```html
+```javascript
 <%- t("menu.home") %>
 ```
 
@@ -77,7 +77,7 @@ And that's it!
 
 ### Changing locale
 
-To change locale *localize-simple* declares the *get* route ```'/locale/:lang/*'```, **:lang** is the locale to change, e.g.: *en*, *es* or any locale that you've declared. The wildcard ```*``` is the return_url to go after changing the locale.
+To change locale *localize-simple* declares the *get* route `'/locale/:lang/*'`, **:lang** is the locale to change, e.g.: *en*, *es* or any locale that you've declared. The wildcard `*` is the return_url to go after changing the locale.
 
 If we want to have a link to change locales you can have:
 
@@ -93,7 +93,7 @@ Clicking the one of the links above *localize-simple* will change the locale and
 
 If you have a whole partial whose content must change depending on the locale, you also have access to variable called **lang** whose value is the current locale, e.g:
 
-```html
+```javascript
 <% if (lang === "en"){ %>
 	<%- partial("profile_en") %>
 <% } %>
@@ -101,9 +101,10 @@ If you have a whole partial whose content must change depending on the locale, y
 <% if (lang === "es"){ %>
 	<%- partial("profile_es") %>
 <% } %>
+```
 
-<!-- or just -->
-
+Or just:
+```javascript
 <%- partial("profile_"+lang) %>
 ```
 
@@ -130,7 +131,7 @@ module.exports = {
 };
 ```
 
-```html
+```javascript
 <%- t("menu.download", {version: "2.5"}) %>
 ```
 
@@ -160,7 +161,7 @@ module.exports = {
 
 But you want to get the locale text for **menu**:
 
-```html
+```javascript
 <%- t("menu") %>
 ```
 
@@ -180,6 +181,6 @@ module.exports = {
 And now you'll get the right text you want.
 
 #### Contact
-For support or contact you can write to [samuelluis@outlook.com](mailto:samuelluis@outlook.com). If you found a bug or have any suggestions, please post an [issue](https://github.com/samuelluis/localize-simple/issues).
+For support or contact you can write to [samuel90luis@gmail.com](mailto:samuel90luis@gmail.com). If you found a bug or have any suggestions, please post an [issue](https://github.com/samuelluis/localize-simple/issues).
 
 Thanks for collaborating!
